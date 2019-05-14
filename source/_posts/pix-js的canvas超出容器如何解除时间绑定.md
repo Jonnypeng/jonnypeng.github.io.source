@@ -6,6 +6,9 @@ tags:
 categories:
 - 代码片段
 ---
+
+废话少说，来一段
+
 ``` js
 renderer.plugins.interaction.autoPreventDefault = false
 ```
