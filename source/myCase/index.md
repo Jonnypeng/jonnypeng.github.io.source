@@ -13,6 +13,8 @@ date: 2018-11-15 14:01:55
 * [10.25我们去瑞士啦！深高速茵特拉根小镇](http://wx.uvcsi.com/html5/sgs/sgs_ouzhou/)
 * [一幅画作测试你的爱心性格](http://wx.uvcsi.com/html5/sgs/dtcs/)
 * [年轻就该趁现在](http://wx.uvcsi.com/html5/ysjz/whileNow/)
+* [泰豪品牌](http://wx.uvcsi.com/html5/taihao/5n/) 
+* [泰豪答题测试](http://wx.uvcsi.com/html5/taihao/jsj/)
 * [一封来自深高速·茵特拉根小镇的邀请](http://wx.uvcsi.com/html5/kuan/)
 * [生活在 森林里](http://wx.uvcsi.com/html5/mountain-park/)
 * [点亮商圈价值 共享城市繁华](http://wx.uvcsi.com/html5/jrc-kan/)

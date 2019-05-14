@@ -2,11 +2,15 @@
 title: 我的演示 
 date: 2019-01-14 10:16:34
 ---
-* [坐标捕获](https://jonnypeng.github.io/captureCoordinate/)
-* [飞机大战演示](https://jonnypeng.github.io/airWar/)
-* [我的装修记事本](http://jonnypeng.gz01.bdysite.com/budget/)
+* [投票系统](http://www.jonnypeng.com/vote/dist/info)
+* [抢房系统](http://www.jonnypeng.com:4004/)
+* [坐标捕获](http://www.jonnypeng.com/demo/captureCoordinate/)
+* [触摸音乐](http://www.jonnypeng.com/demo/touch_music/)
+* [飞机大战演示](http://www.jonnypeng.com/demo/airWar/)
+* [费用表](http://budget.jonnypeng.com)
 * [未完成的乐湾项目](http://wx.uvcsi.com/html5/houseBook/)
-* [图片压缩工具](https://jonnypeng.github.io/CompressPictures.js/)
-* [MBTI测试](https://jonnypeng.github.io/MBTItest/)
-* [为PIXI增加物理引擎](https://jonnypeng.github.io/pixi2matter/)
+* [图片压缩工具](http://www.jonnypeng.com/demo/CompressPictures.js/)
+* [MBTI测试](http://www.jonnypeng.com/demo/MBTItest/docs/)
+* [为PIXI增加物理引擎](http://www.jonnypeng.com/demo/pixi2matter/)
+* [年会抽奖](http://www.jonnypeng.com:4005/award/)
 
