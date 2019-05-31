@@ -2,6 +2,7 @@
 title: 我的演示 
 date: 2019-01-14 10:16:34
 ---
+* [人脸信息读取](http://www.jonnypeng.com:4006/demo)
 * [投票系统](http://www.jonnypeng.com/vote/dist/info)
 * [抢房系统](http://www.jonnypeng.com:4004/)
 * [坐标捕获](http://www.jonnypeng.com/demo/captureCoordinate/)
