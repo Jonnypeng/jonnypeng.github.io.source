@@ -3,8 +3,8 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Jonny$ Atom .▍
-subtitle: 彭江的博客
+title: 重影对话
+subtitle: Jonny Peng's personal blog
 description: Jonny Peng's personal blog
 keywords:
 author: Jonny Peng
@@ -13,7 +13,7 @@ timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://jonnypeng.github.io/
+url: https://www.jonnypeng.com/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
