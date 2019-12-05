@@ -2,6 +2,7 @@
 title: 我的案例
 date: 2018-11-15 14:01:55
 ---
+* [Civa联网对战选择题](https://minigame.civaonline.cn/#/game24)
 * [经开记忆](http://wx.uvcsi.com/html5/sunac/memories/index.php)
 * [友为传播](http://wx.uvcsi.com/html5/uvcsi/home.php?id=home)
 * [优徕城市精选](http://www.ulifecity.com/)
