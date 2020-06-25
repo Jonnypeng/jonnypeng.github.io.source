@@ -7,8 +7,9 @@ category:
 - 代码片段
 ---
 
-<!-- more -->
+见配置文件
 
+<!-- more -->
 ```
 set nocompatible              " be iMproved, required
 filetype on                  " required
