@@ -1,0 +1,61 @@
+---
+title: JS的单例模式
+date: 2020-11-02 10:47:01
+tags:
+---
+- 设计模式
+
+单例模式是指每一个类只会生成一个实例，这样可以节省开销，也容易进行业务管理，首先以TS来一段单例实现
+
+``` typescript
+class Scene{
+    public name:string;
+    private static instance:Scene; 
+    private constructor(name:string){
+        this.name = name;
+    }
+
+    public static getInstance():Scene{
+        if(!Scene.instance){
+            Scene.instance = new Scene("Jonny");
+        }
+        return Scene.instance;
+    }
+
+}
+
+//let a = new Scene("jonny"); //编译错误
+let a = Scene.getInstance();
+let b = Scene.getInstance();
+
+console.log(a===b);   //true
+```
+<!-- more -->
+
+再来看一下ES5实现
+
+``` js
+function Scene(){
+    this.name = 'jonny';
+}
+
+Scene.instance = null;
+
+Scene.prototype.getName = function (){
+    return Scene.instance.name;
+}
+
+Scene.getInstance = function (){
+    if(!Scene.instance){
+       Scene.instance = new Scene(); 
+    }
+    return Scene.instance;
+}
+
+var a = Scene.getInstance();
+var b = Scene.getInstance();
+console.log(a===b); //true
+console.log(a.getName()); //'jonny'
+```
+
+
