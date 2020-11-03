@@ -1,0 +1,60 @@
+---
+title: JS代理模式
+date: 2020-11-03 10:16:43
+tags:
+---
+- 设计模式
+
+当客户程序不断地访问本体程序，会产生副作用，譬如垃圾请求、不符合规范的请求，或者是本体程序尚未做好准备，所以需要通过代理的规范请求内容，过滤不符合要求的请求，这就是代理模式
+
+``` js
+
+//本体程序返回数字的倍数
+var A = function (num){
+    return num*2;
+}
+
+//代理程序，检查输入的是不是数字
+var B = function (num){
+    if(typeof num !== 'number'){
+        console.log('你输入的不是数字');
+        return false;
+    }else{
+        A(num);
+    }
+} 
+
+//客户程序
+(function (){
+    B(3); //6
+    B('3') //error
+})()
+
+```
+
+<!-- more -->
+
+当客户程序请求本体程序会产生大量的数据及开销时，可以使用代理来处理这些请求，如果发现有缓存的内容，则直接返回数据
+
+``` js
+
+var A = function (id){
+    return Math.floor(Math.random()*Math.pow(10,10)).toString(26); //返回一个随机串
+}
+
+var B = (function (){
+    var map = {};
+    return function (id){
+        if(!map[id]){
+          map[id] = A(id);
+        }
+        return map[id];
+    }
+})();
+
+B(1); //"f0jbcp1"
+B(1); //"f0jbcp1"
+B(3); //"am1mmk5"
+
+```
+
