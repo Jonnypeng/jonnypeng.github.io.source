@@ -1,0 +1,75 @@
+---
+title: TS模版方法
+date: 2020-11-06 09:36:08
+tags:
+---
+- 设计模式
+
+模版方法是指在父类搭建算法框架，通过子类继承这些算法框架，并调用父类的模版方法对算法框架进行调用，特别是解决众多类具有很多相同算法，只有少量不同的场景
+
+例如泡茶与泡咖啡都有很多相同的流程，只是细节有些差异，就可以通过模版方法进行归纳
+
+<!-- more -->
+
+``` typescript
+abstract class Behavior{
+   // 把水煮开
+   abstract BoilWater():void;
+
+    // 加入原料
+   abstract AddRawMaterials():void;
+
+    // 加入调料
+   abstract AddSeasoning():void;
+    
+    // 等待多久时间
+   abstract WaitTimer():void;
+
+    // 开始制作
+   init(){
+       this.BoilWater();
+       this.AddRawMaterials();
+       this.AddSeasoning();
+       this.WaitTimer();
+   }
+}
+
+class Coffe extends Behavior{
+    BoilWater(){
+        console.log('加入水');
+    }
+    AddRawMaterials(){
+        console.log('加咖啡');
+    }
+    AddSeasoning(){
+        console.log('加奶精');
+    }
+    WaitTimer(){
+        console.log('等待4分钟');
+    }
+   
+}
+
+class Tea extends Behavior{
+    BoilWater(){
+        console.log('加入水');
+    }
+    AddRawMaterials(){
+        console.log('加茶');
+    }
+    AddSeasoning(){
+        console.log('不加');
+    }
+    WaitTimer(){
+        console.log('等待4分钟');
+    }
+   
+}
+
+
+let coffe = new Coffe();
+coffe.init();
+
+let tea = new Tea();
+tea.init();
+```
