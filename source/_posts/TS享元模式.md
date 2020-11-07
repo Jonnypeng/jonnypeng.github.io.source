@@ -1,0 +1,89 @@
+---
+title: TS享元模式
+date: 2020-11-07 14:46:05
+tags:
+---
+- 设计模式
+
+享元模式的核心是共享对象，目的是节省内存开销，分为三个场景，共享对象的内部状态、共享对象的工厂函数、共享对象的外部函数。以共享单车为例，如下
+
+<!-- more -->
+
+``` typescript
+
+abstract class BikeFlyWeight{
+    protected state:number = 0; // 0为未使用，1为使用中
+    abstract ride(userName:string):void;
+    abstract back():void;
+
+    public getState():number{
+        return this.state;
+    }
+}
+
+class MoBikeFlyWeight extends BikeFlyWeight{
+    private bikeId:string = '';
+    
+    constructor(bikeId:string){
+        super();
+        this.bikeId = bikeId;
+    }
+
+    ride(userName:string):void{
+        this.state = 1;
+        console.log(`${userName}骑${this.bikeId}号自行车`);
+    }
+    back():void{
+        this.state = 0;
+    }
+}
+
+class BikeFlyWeightFactory{
+    private static instance:BikeFlyWeightFactory = new BikeFlyWeightFactory();
+    private pool:Set<BikeFlyWeight> = new Set<BikeFlyWeight>();
+    private constructor(){
+        for(let i = 0;i<2;i++){
+            let bikeId:string = Math.floor(Math.random()*100000).toString(26);
+            this.pool.add(new MoBikeFlyWeight(bikeId));
+        }
+    }
+
+    public static getInstance():BikeFlyWeightFactory{
+        return BikeFlyWeightFactory.instance;
+    }
+
+    public getBike():BikeFlyWeight|null{
+        let resultBike:BikeFlyWeight = null;
+        for(let bike of this.pool){
+            if(bike.getState() === 0){
+                resultBike = bike;
+                break;
+            }
+        }
+        return resultBike;
+    }
+}
+
+class FlyWeightPattern{
+    public static main():void{
+        let bike1:BikeFlyWeight = BikeFlyWeightFactory.getInstance().getBike();
+        bike1.ride('Jonny');
+
+        let bike2:BikeFlyWeight = BikeFlyWeightFactory.getInstance().getBike();
+        bike2.ride('Candy');
+        bike2.back();
+
+        let bike3:BikeFlyWeight = BikeFlyWeightFactory.getInstance().getBike();
+        bike3.ride('Amy');
+
+        console.log(bike2===bike3);  //是同一辆单车
+
+        bike3.back();
+
+        console.log(bike1===bike3);    //不是同一辆单车
+    }
+}
+
+FlyWeightPattern.main();
+
+```
