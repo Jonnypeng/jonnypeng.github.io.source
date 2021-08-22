@@ -3,7 +3,6 @@ title: typeScript的类
 date: 2018-11-09 22:32:30
 tags:
 - TypeScript
-- class
 categories:
 - 教程
 ---
