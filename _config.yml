@@ -81,3 +81,14 @@ deploy:
   type: git
   repo: git@github.com:Jonnypeng/jonnypeng.github.io.git
   branch: master
+
+#Feed Atom
+feed:
+  type: atom
+  path: atom.xml
+  limit:  1000 
+  hub:
+  content:
+  content_limit: 10000 
+  content_limit_delim: ' '
+  order_by: -date
